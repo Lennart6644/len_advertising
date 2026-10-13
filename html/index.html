@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fx" class="fx-layer">
+        <div class="fx-vignette"></div>
+        <div class="fx-scan"></div>
+    </div>
+
+    <main id="app" class="hidden">
+        <section id="panel" class="panel">
+            <header class="panel-header">
+                <div class="panel-title">
+                    <span class="panel-icon"><i id="panel-icon" class="fas fa-bullhorn"></i></span>
+                    <div>
+                        <h1 id="panel-title"></h1>
+                        <p class="subtitle" data-i18n="subtitle"></p>
+                    </div>
+                </div>
+                <button class="icon-btn" id="btn-close"><i class="fas fa-xmark"></i></button>
+            </header>
+
+            <div class="field">
+                <div class="field-head">
+                    <span class="label" data-i18n="message"></span>
+                    <span class="counter"><span id="char-count">0</span> / <span id="char-max">150</span></span>
+                </div>
+                <textarea id="message" rows="2"></textarea>
+            </div>
+
+            <div class="field">
+                <div class="field-head">
+                    <span class="label" data-i18n="duration"></span>
+                    <span class="badge"><span id="time-value">10</span> <span data-i18n="seconds"></span></span>
+                </div>
+                <input type="range" id="time" class="slider">
+                <div class="range-labels"><span id="time-min"></span><span id="time-max"></span></div>
+            </div>
+
+            <div class="toggle-card" id="toggle-row">
+                <div class="toggle-info">
+                    <span class="toggle-title" id="toggle-title"></span>
+                    <span class="toggle-desc" id="toggle-desc"></span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="important">
+                    <span class="track"></span>
+                </label>
+            </div>
+
+            <div class="preview">
+                <span class="label" data-i18n="preview"></span>
+                <div id="preview-card"></div>
+            </div>
+
+            <footer class="panel-footer">
+                <button class="ghost-btn" id="btn-reset"><i class="fas fa-rotate-left"></i> <span data-i18n="reset"></span></button>
+                <div class="price" id="price"><span data-i18n="price"></span> <strong id="price-value">0</strong></div>
+                <button class="primary-btn" id="btn-submit"><span data-i18n="submit"></span> <i class="fas fa-paper-plane"></i></button>
+            </footer>
+        </section>
+    </main>
+
+    <div id="stack-top-center" class="stack stack-top-center"></div>
+    <div id="stack-top-right" class="stack stack-top-right"></div>
+    <div id="stack-bottom-right" class="stack stack-bottom-right"></div>
+    <div id="stack-bottom-left" class="stack stack-bottom-left"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
